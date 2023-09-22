@@ -2,6 +2,7 @@ import schedule
 import time
 import yaml
 from importlib import import_module
+from utils.time import isWorkingHours
 
 def task1():
     with open("configs/config1.yaml", 'r') as file:
@@ -21,10 +22,15 @@ def task3():
         task_module = import_module(f'tasks.{config["task"]}')
         task_module.run(config)
 
-schedule.every(2).minutes.do(task1)
-schedule.every(2).minutes.do(task2)
-# schedule.every(3).minutes.do(task3)
+def scheduleWorkingHours():
+    schedule.every(5).minutes.do(task1)
+    schedule.every(5).minutes.do(task2)
+    schedule.every(3).minutes.do(task3)
 
 while True:
-    schedule.run_pending()
+    if isWorkingHours():
+        schedule.run_pending()
+    else: 
+        schedule.clear()
+        scheduleWorkingHours()
     time.sleep(1)
