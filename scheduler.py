@@ -21,7 +21,7 @@ def task3():
         task_module = import_module(f'tasks.{config["task"]}')
         task_module.run(config)
 
-schedule.every(2).minute.do(task1)
+schedule.every(2).minutes.do(task1)
 schedule.every(2).minutes.do(task2)
 # schedule.every(3).minutes.do(task3)
 
