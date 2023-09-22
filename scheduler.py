@@ -25,7 +25,7 @@ def task3():
 def scheduleWorkingHours():
     schedule.every(5).minutes.do(task1)
     schedule.every(5).minutes.do(task2)
-    schedule.every(3).minutes.do(task3)
+    schedule.every(30).minutes.do(task3)
 
 while True:
     if isWorkingHours():
