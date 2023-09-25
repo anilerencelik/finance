@@ -9,7 +9,6 @@ def isWorkingHours(tz='Europe/Istanbul'):
     now = datetime.now(pytz.timezone(tz))
     start_time = now.replace(hour=10, minute=0, second=0)
     end_time = now.replace(hour=18, minute=0, second=0)
-    print(isWorkingDays())
     return (start_time <= now <= end_time) and isWorkingDays()
 
 def isWorkingDays():
