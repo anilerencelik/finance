@@ -1,15 +1,17 @@
 class Symbol:
+  
+  def messager(self):
+        if self.type == 1:
+          message = f"SAT\nKod: {self.code} Tavan Bozdu\nAnlık Fiyat: {self.currentPrice}₺\nGünlük Değişim: %{self.dailyChangePercentage:.2f}"
+        elif self.type == 2:
+            message = f"SATIN ALIM FIRSATI\nKod: {self.code} \nAnlık Fiyat: {self.currentPrice}₺\nGünlük Değişim: %{self.dailyChangePercentage:.2f}"
+        else:
+            message = f"Envanter\nKod: {self.code}\nFiyat: {self.currentPrice:.4f}₺\nDeğişim: %{self.dailyChangePercentage:.2f}"
+        return message
 
-  def messager1(self):
-      message = f"SAT\nKod: {self.code} Tavan Bozdu\nAnlık Fiyat: {self.currentPrice}₺\nGünlük Değişim: %{self.dailyChangePercentage:.2f}"
-      return message
-
-  def messager2(self):
-      message = f"SATIN ALIM FIRSATI\nKod: {self.code} \nAnlık Fiyat: {self.currentPrice}₺\nGünlük Değişim: %{self.dailyChangePercentage:.2f}"
-      return message
-
-  def __init__(self, symbol, currentPrice, previousClose):
+  def __init__(self, symbol, currentPrice, previousClose, type):
     self.symbol = symbol
+    self.type = type
     self.currentPrice = currentPrice
     self.previousClose = previousClose
     self.dailyChange = currentPrice - previousClose

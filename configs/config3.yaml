@@ -1,3 +1,26 @@
-name: Hisse Satım Seviyesine Gelme
+name: Fon Envanter
 task: task3
-token: 6321515977:AAGyDfbSr6KoXlU_voILoZRXJESpoNEyUtk
+token: 6615742088:AAFjPXrXk5xpQc1ITSMFNRwxmSEcFoUjHtI
+params:
+  - KONKA.IS
+  - PGSUS.IS
+  - ISCTR.IS
+  - ANSGR.IS
+  - DOHOL.IS
+  - ISMEN.IS
+  - SAFKR.IS
+  - KAREL.IS
+  - ALARK.IS
+  - FROTO.IS
+  - GLYHO.IS
+  - GRSEL.IS
+  - TTKOM.IS
+  - BIMAS.IS
+  - OSMEN.IS
+fons:
+  - BUY
+  - TCD
+  - GUM
+  - GOH
+  - ST1
+  - ZFB

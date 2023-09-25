@@ -11,7 +11,7 @@ def run(config):
 
 def getDataFinans(code, config):
     stock = yf.Ticker(code)
-    symbol = Symbol(code, stock.info.get('currentPrice'), stock.info.get('previousClose'))
+    symbol = Symbol(code, stock.info.get('currentPrice'), stock.info.get('previousClose'), 2)
 
     if symbol.dailyChangePercentage < -3.5:
-        send_message_to_telegram(symbol.messager2(), config['token'])
+        send_message_to_telegram(symbol.messager(), config['token'])
