@@ -26,7 +26,8 @@ def scheduleWorkingHours():
     schedule.every(5).minutes.do(task1)
     schedule.every(5).minutes.do(task2)
     schedule.every(30).minutes.do(task3)
-    
+
+print("Starting Finance App")
 scheduleWorkingHours()
 while True:
     if isWorkingHours():
