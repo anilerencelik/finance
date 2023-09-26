@@ -32,7 +32,7 @@ def task4():
 def scheduleWorkingHours():
     schedule.every(5).minutes.do(task1)
     schedule.every(5).minutes.do(task2)
-    schedule.every().day.at("18:15").do(task3)
+    schedule.every().day.at("18:15", "Europe/Istanbul").do(task3)
 
 if (len(sys.argv) > 1):
     task4()
