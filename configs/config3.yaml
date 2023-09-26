@@ -17,6 +17,7 @@ params:
   - TTKOM.IS
   - BIMAS.IS
   - OSMEN.IS
+  - GWIND.IS
 fons:
   - BUY
   - TCD
