@@ -15,3 +15,5 @@ def getDataFinans(code, config):
 
     if symbol.dailyChangePercentage < -3.5:
         send_message_to_telegram(symbol.messager(), config['token'])
+    elif symbol.dailyChangePercentage > 5:
+        send_message_to_telegram(symbol.messager(), config['token'])

@@ -4,7 +4,7 @@ class Symbol:
         if self.type == 1:
           message = f"SAT\nKod: {self.code} Tavan Bozdu\nAnlık Fiyat: {self.currentPrice}₺\nGünlük Değişim: %{self.dailyChangePercentage:.2f}"
         elif self.type == 2:
-            message = f"SATIN ALIM FIRSATI\nKod: {self.code} \nAnlık Fiyat: {self.currentPrice}₺\nGünlük Değişim: %{self.dailyChangePercentage:.2f}"
+            message = f"ALIM/SATIM FIRSATI\nKod: {self.code} \nAnlık Fiyat: {self.currentPrice}₺\nGünlük Değişim: %{self.dailyChangePercentage:.2f}"
         else:
             message = f"Envanter\nKod: {self.code}\nFiyat: {self.currentPrice:.4f}₺\nDeğişim: %{self.dailyChangePercentage:.2f}"
         return message
