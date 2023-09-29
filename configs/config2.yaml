@@ -1,7 +1,7 @@
 name: Hisse Alım/Satım Seviyesine Gelme
 task: task2
 token: 6321515977:AAGyDfbSr6KoXlU_voILoZRXJESpoNEyUtk
-params:
+others:
   - ISMEN.IS
   - INFO.IS
   - MGROS.IS
@@ -14,16 +14,17 @@ params:
   - THYAO.IS
   - AKBNK.IS
   - GARAN.IS
-  - GRSEL.IS
   - PNSUT.IS
-  - DOHOL.IS
   - ANHYT.IS
   - KAREL.IS
   - AKGRT.IS
-  - GWIND.IS
-  - ISCTR.IS
   - TTRAK.IS
   - KCHOL.IS
   - SAYAS.IS
-  - KONKA.IS
+params:
   - GLYHO.IS
+  - ISCTR.IS
+  - ALARK.IS
+  - KONKA.IS
+  - GRSEL.IS
+  - GWIND.IS

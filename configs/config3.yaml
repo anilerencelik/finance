@@ -5,18 +5,10 @@ params:
   - KONKA.IS
   - PGSUS.IS
   - ISCTR.IS
-  - ANSGR.IS
-  - DOHOL.IS
-  - ISMEN.IS
-  - SAFKR.IS
-  - KAREL.IS
   - ALARK.IS
-  - FROTO.IS
   - GLYHO.IS
   - GRSEL.IS
   - TTKOM.IS
-  - BIMAS.IS
-  - OSMEN.IS
   - GWIND.IS
 fons:
   - BUY
