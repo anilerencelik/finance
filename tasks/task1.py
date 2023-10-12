@@ -11,6 +11,8 @@ def run(config):
 
 def getDataFinans(code, config):
     stock = yf.Ticker(code)
+    if (not stock.info.get('currentPrice')) or (not stock.info.get('previousClose')):
+        return
     symbol = Symbol(code, stock.info.get('currentPrice'), stock.info.get('previousClose'), 1)
 
     if symbol.dailyChangePercentage < -3:
