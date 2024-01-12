@@ -1,4 +1,5 @@
 name: Fon Envanter
+enabled: False
 task: task3
 token: 6615742088:AAFjPXrXk5xpQc1ITSMFNRwxmSEcFoUjHtI
 params:

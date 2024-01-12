@@ -1,4 +1,5 @@
 name: Hisse Alım/Satım Seviyesine Gelme
+enabled: False
 task: task2
 token: 6321515977:AAGyDfbSr6KoXlU_voILoZRXJESpoNEyUtk
 others:

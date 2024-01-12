@@ -1,5 +1,18 @@
-name: Hisse Alım Seviyesine Gelme
+name: 200 Günlük Ortalama
+enabled: True
 task: task4
 token: 6321515977:AAGyDfbSr6KoXlU_voILoZRXJESpoNEyUtk
 params:
-  - ISMEN.IS
+  - BIST:TUPRS
+  - BIST:SISE
+  - BIST:MGROS
+  - BIST:CCOLA
+  - BIST:ISCTR
+  - BIST:ASELS
+  - BIST:THYAO
+  - BIST:BIMAS
+  - BIST:AEFES
+  - BIST:ISMEN
+  - BIST:OYAKC
+  - BIST:CIMSA
+  - BIST:GLYHO

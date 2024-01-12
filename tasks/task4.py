@@ -1,18 +1,27 @@
-import yfinance as yf
-from utils.symbol import Symbol
 from utils.time import getTime
+from utils.tradingiew import get_data_from_tradingview
 from utils.telegram import send_message_to_telegram
 
 def run(config):
     print(getTime(), f"{config['name']} çalışıyor!")
-    for code in config['params']:
-        getDataFinans(code, config)
+    for ticker in config['params']:
+        getData(ticker, config['token'])
     print(getTime(), f"{config['name']} çalıştı!")
 
-def getDataFinans(code, config):
-    stock = yf.Ticker(code)
-    print(stock.info)
-    symbol = Symbol(code, stock.info.get('currentPrice'), stock.info.get('previousClose'), 2)
 
-    # if symbol.dailyChangePercentage < -3.5:
-    #     send_message_to_telegram(symbol.messager(), config['token'])
+def getData(ticker, token): 
+    fields = "EMA200,open,close,high,low,Perf.5Y,Perf.3Y,Perf.Y,Perf.YTD,Perf.6M,Perf.3M,PERF.1M"
+    fields = "EMA200,close"
+    data = get_data_from_tradingview(ticker, fields)
+
+    ema_below_200 = data['EMA200'] > data['close']
+    diff_percentage = abs((data['EMA200'] - data['close']) / data['close']) * 100
+    ema_within_2_percent = (data['close'] / data['EMA200'] ) <= 1.020001
+
+    if ema_below_200: 
+        message = f"{ticker} 200 Günlük Ortalama Altında."
+        send_message_to_telegram(message, token)
+    elif ema_within_2_percent:
+        message = f"{ticker} 200 Günlük Ortalama Yakınında fark %{diff_percentage:.2f}."
+        send_message_to_telegram(message, token)
+    print(data)
